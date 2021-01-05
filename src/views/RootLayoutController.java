@@ -16,7 +16,7 @@ public class RootLayoutController {
     
     @FXML
     private void handleListRoutes() {
-    	//mainController.listRoutes();
+    	mainController.listRoutes();
     }  
     
     @FXML

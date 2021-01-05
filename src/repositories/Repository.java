@@ -1,6 +1,8 @@
 package repositories;
 
 import daos.DAO;
+import daos.TestDAO;
+import daos.SQLDAO;
 import java.util.List;
 import model.Route;
 import model.RouteStage;
@@ -9,10 +11,10 @@ public class Repository {
     private DAO dao;
 	
     public Repository() { 
-    	dao = null; 
+    	dao = new SQLDAO (); 
     }
     
-    public List<Route> getItems() {      	
+    public List<Route> getItems() {   
         return dao.getRoutes();
     }
     

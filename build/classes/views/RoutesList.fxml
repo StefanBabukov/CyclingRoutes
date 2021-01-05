@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.40" fx:controller="views.RoutesListController">
+   <children>
+        <SplitPane dividerPositions="0.4126984126984127" layoutX="153.0" layoutY="70.0" prefHeight="300.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>   
+                <AnchorPane prefHeight="300.0" prefWidth="400.0">
+                    <children>
+                        <TableView fx:id="routes" prefHeight="300.0" prefWidth="400.0" layoutX="15.0" layoutY="15.0">
+                            <columns>
+                                <TableColumn fx:id="id" prefWidth="15.0" text="Id" />
+                                <TableColumn fx:id="routeTitleColumn" prefWidth="15.0" text="Title" />
+                                <TableColumn fx:id="departurePointColumn" prefWidth="175.0" text="Departure Point" />
+                            </columns>
+                        </TableView>
+                        <ButtonBar layoutX="54.0" layoutY="250.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                            <buttons>
+                                <Button  prefWidth="150.0" mnemonicParsing="false" onAction="#handleAddRoute" text="Add Route" />
+                                <Button mnemonicParsing="false" onAction="#handleAddStage" text="Add Stage" />
+                            </buttons>
+                        </ButtonBar>				        
+                    </children>	
+                </AnchorPane>
+                <AnchorPane prefHeight="300.0" prefWidth="300.0">
+                    <children>
+                        <TableView fx:id="stages" prefHeight="300.0" prefWidth="300.0" layoutX="15.0" layoutY="15.0">
+                            <columns>
+                                <TableColumn fx:id="stageNumberColumn" prefWidth="15.0" text="Stage Number" />
+                                <TableColumn fx:id="endPointColumn" prefWidth="175.0" text="End Point" />
+                                <TableColumn fx:id="stageLengthColumn" prefWidth="175.0" text="Stage Length" />
+                            </columns>
+                        </TableView>
+                    </children>	
+                </AnchorPane>
+            </items>
+        </SplitPane>		
+  </children>
+</AnchorPane>

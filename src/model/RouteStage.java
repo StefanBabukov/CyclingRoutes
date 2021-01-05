@@ -25,39 +25,38 @@ public class RouteStage {
     }
 
     public void setStageNumber(int stageNumber) {
-        // Complete this method
+        this.stageNumber = stageNumber;
     }    
 
     public String getEndPoint() {
-        // Complete this method
-        return null;
+        return this.endPoint;
     }
 
     public void setEndPoint(String endPoint) {
-        // Complete this method
+        this.endPoint = endPoint;
     }
 
     public float getStageLength() {
-        // Complete this method
-        return 0.0f;
+        return this.stageLength;
     }
 
     public void setStageLength(float stageLength) {
-        // Complete this method
+        this.stageLength = stageLength;
     }    
     
     public int getRouteId() {
-        // Complete this method
-        return 0;
+        return this.routeId;
     }
 
     public void setRouteId(int routeId) {
-        // Complete this method
+        this.routeId = routeId;
     }       
     
     @Override
     public String toString() {
-        // Complete this method
-        return null;
+        return "\nStage number: " + Integer.toString(getStageNumber())+
+                "\nEnd point: " + getEndPoint()+
+                "\n Stage length: " + getStageLength()+
+                "\n Route ID: " + getRouteId();
     }      
 }
